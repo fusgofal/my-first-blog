@@ -77,11 +77,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ejemplo1',
-        'USER': 'postgres',
-        'PASSWORD': 'colombia',
-        'HOST': 'localhost',
+       # 'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'gjango.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'USER': 'fusgofal',
+        # 'PASSWORD': 'SweetDreams',
+        # 'HOST': 'fusgofal.mysql.pythonanywhere-services.com',
+        # 'PORT':'443',
     }
 }
 
