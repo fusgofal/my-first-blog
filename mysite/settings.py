@@ -78,13 +78,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
        # 'ENGINE': 'django.db.backends.mysql',
-        'ENGINE': 'gjango.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'PORT': '5432',
-        # 'USER': 'fusgofal',
-        # 'PASSWORD': 'SweetDreams',
-        # 'HOST': 'fusgofal.mysql.pythonanywhere-services.com',
-        # 'PORT':'443',
+        # 'PORT': '5432',
+        'USER': 'fusgofal',
+        'PASSWORD': 'SweetDreams',
+        'HOST': 'fusgofal.mysql.pythonanywhere-services.com',
+        'PORT':'8001',
     }
 }
 
@@ -126,3 +126,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
